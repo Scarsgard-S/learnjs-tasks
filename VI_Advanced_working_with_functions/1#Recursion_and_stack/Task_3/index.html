@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+
+	<body>
+
+		<p>Задача 3, числа Фибоначчи.</p>
+
+		<script>
+			"use strict";
+
+			/* Плохой вариант
+			function fib(n) {
+				return n <= 1 ? n : fiv(n - 1) + fib(n - 2);
+			}
+			*/
+
+			function fib(n) {
+				let a = 1; // или 0
+				let b = 1;
+				for (let i = 3; i <= n; i++) {
+					let c = a + b;
+					a = b;
+					b = c;
+				}
+				return b;
+			}
+
+			alert( fib(3) );
+			alert( fib(7) );
+			alert( fib(77) );
+		</script>
+
+	</body>
+
+</html>

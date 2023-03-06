@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+
+	<body>
+
+		<p>Задача 5, фильтрация с помощью функции.</p>
+
+		<script>
+			"use strict";
+
+			function inBetween(a, b) {
+				return function(n) {
+					return n >= a && n <= b;
+				};
+			}
+
+			let arr = [1, 2, 3, 4, 5, 6, 7];
+
+			alert( arr.filter(inBetween(3, 6)) );
+
+			function inArray(array) {
+				return function(n) {
+					return array.includes(n);
+				}
+			}
+
+			alert( arr.filter(inArray([1, 2, 10])) );
+		</script>
+
+	</body>
+
+</html>
+

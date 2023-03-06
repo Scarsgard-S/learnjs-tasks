@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+
+	<body>
+
+		<p>Задача 1, вычислить сумму чисел до данного.</p>
+
+		<script>
+			"use strict";
+
+			function sumTo_1(n) {
+				let sum = 0;
+
+				for (let i = 1; i <= n; i++) {
+					sum += i;
+				}
+				return sum;
+			}
+
+			alert( sumTo_1(99) );
+
+			function sumTo_2(n) {
+				if (n == 1) return 1;
+				return n + sumTo_2(n - 1);
+			}
+
+			alert( sumTo_2(100) );
+
+			function sumTo_3(n) {
+				return n * (n + 1) / 2;
+			}
+
+			alert( sumTo_2(101) );
+
+		</script>
+
+	</body>
+
+</html>
