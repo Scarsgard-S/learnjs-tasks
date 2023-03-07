@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+
+	<body>
+
+		<p>Задача 2, сумма с произвольным количеством скобок.</p>
+
+		<script>
+			"use strict";
+			
+			function sum(InitialValue) {
+				let sum = InitialValue;
+
+				function add(number) {
+					sum += number;
+
+					return add;
+				}
+
+				add.toString = function() {
+					return sum;
+				};
+
+				return add;
+			}
+
+  			alert( sum(1)(2) );
+			alert( sum(1)(2) );
+			alert( sum(1)(2)(3) );
+			alert( sum(5)(-1)(2) );
+			alert( sum(6)(-1)(-2)(-3) );
+			alert( sum(0)(1)(2)(3)(4)(5) );
+			
+		</script>
+
+	</body>
+
+</html>
+

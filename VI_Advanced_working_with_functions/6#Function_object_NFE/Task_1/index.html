@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+
+	<body>
+
+		<p>Задача 1, установка и уменьшение значения счётчика.</p>
+
+		<script>
+			"use strict";
+			
+			  function makeCounter() {
+
+			    function counter() {
+			    	return counter.count++;
+			    };
+
+			    counter.count = 0;
+
+			    counter.set = function(value) {
+			    	counter.count = value;
+			    }
+
+			    counter.decrease = function() {
+			    	return counter.count--;
+			    }
+			    
+
+			    return counter;
+			  }
+			
+			  /* Второй вариант
+			  function makeCounter() {
+			  	let count = 0;
+
+			  	function counter() {
+			  		return count++;
+			  	}
+
+			  	counter.set = value => count = value;
+
+			  	counter.decrease = () => count--;
+
+			  	return counter;
+			  }
+			*/
+
+			  let counter = makeCounter();
+			  
+			  alert( counter() ); // 0
+			  alert( counter() ); // 1
+
+			 
+			  counter.set(10); // установить новое значение счётчика
+			  
+			  alert( counter() ); // 10
+			 
+			  counter.decrease(); // уменьшить значение счётчика на 1
+			  
+			  alert( counter() ); // 10 (вместо 11)
+
+
+
+		</script>
+
+	</body>
+
+</html>
+
