@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+
+	<body>
+
+		<p>Практика ‘‘ Синтаксис "new Function" ’’</p>
+
+		<script>
+			"use_strict";
+
+			let a = prompt('Введите a', '');
+			let b = prompt('Введите b', '');
+
+			let trueArg = new Function('a, b', 'return a*b');
+
+			alert( trueArg(a, b) );
+
+		</script>
+
+	</body>
+
+</html>
+

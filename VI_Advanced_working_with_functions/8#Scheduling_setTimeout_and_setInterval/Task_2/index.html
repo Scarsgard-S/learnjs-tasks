@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+
+	<body>
+
+		<p>Задача 2, что покажет setTimeout?</p>
+
+		<script>
+			"use_strict";
+
+			let i = 0;
+
+			setTimeout(() => alert(i), 100);
+
+			for(let j = 0; j < 100000000; j++) {
+			  i++;
+			}
+
+			// setTimeout выполнится после цикла
+			// alert покажет 100e6
+		</script>
+
+	</body>
+
+</html>
+

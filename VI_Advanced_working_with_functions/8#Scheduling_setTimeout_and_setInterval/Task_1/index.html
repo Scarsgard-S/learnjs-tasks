@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+
+	<body>
+
+		<p>Задача 1, вывод каждую секунду.</p>
+
+		<script>
+			"use strict";
+
+			function printNumbersInterval(from, to) {
+				let current = from;
+
+				let timerId = setInterval(function() {
+
+					if (current <= to) {
+					alert(current);
+					current++;
+					} else {
+						clearInterval(timerId)
+					};
+				
+				}, 1000);
+
+			}
+
+			// printNumbersInterval(1, 5);
+
+			function printNumbersTimeout(from, to) {
+				let current = from;
+
+				let timerId = setTimeout(function tick() {
+
+					if (current <= to) {
+					alert(current);
+					current++;
+					} else {
+						clearTimeout(timerId)
+					};
+
+					timerId = setTimeout(tick, 1000);
+				
+				}, 1000);
+			}
+
+			// printNumbersTimeout(1, 8);
+
+		</script>
+
+	</body>
+
+</html>
+
